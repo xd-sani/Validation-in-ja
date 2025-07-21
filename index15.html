@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-family: sans-serif;
+            background-color: black;
+        }
+        .container{
+            width: 380px;
+            border-radius: 18px;
+            background-color: aqua;
+            padding: 20px 35px;
+            transition: all  ease-in 1s;
+        }
+        .container:hover{
+            background-color: violet;
+        }
+        .container h2{
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .container form{
+            padding: 20px 20px;
+            letter-spacing: 0.2px;
+        }
+        .container input{
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        .container select{
+            width: 150px;
+            border-radius: 12px;
+            border: 1px solid black;
+        }
+        .remember{
+            margin-top: 20px;
+            padding-left: 110px;
+        }
+        .remember input{
+            padding: 11px 30px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            box-shadow: 0px 0px 11px black;
+            transition: all 0.5s ease-out 0.5s;
+        }
+        .remember input:hover{
+            letter-spacing: 2px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h2>Regisration Form</h2>
+    <form method="post" onsubmit="return validation()">
+        Full name : <input type="text" name="Full Name" id="Fullname">
+        <span id="nameerror" class="error"></span>
+        <br><br>
+        Gender : <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="female">Female
+        <span id="gendererror" class="error"></span>
+        <br><br>
+        Email : <input type="email" name="email" id="email">
+        <span id="emailerror" class="error"></span>
+        <br><br>
+        Skills:
+        <input type="checkbox" name="skills" id="Java" value="Java">Java
+        <input type="checkbox" name="skills" id="JavaScript" value="JavaScript">JavaScript
+        <input type="checkbox" name="skills" id="Python" value="Python">Python
+        <input type="checkbox" name="skills" id="Css" value="Css">Css
+        <span id="skillserror" class="error"></span>
+        <br><br>
+        City:
+        <select name="City" id="City">
+            <option>Select your City</option>
+            <option>Kolkata</option>
+            <option>Indore</option>
+            <option>Pune</option>
+            <option>Delhi</option>
+        </select>
+        <span id="cityerror" class="error"></span>
+        <br><br>
+        <div class="remember">
+           <input type="button" value="Login">
+        </div>
+    </form>
+    <script src="Validation.js"></script>
+    </div>
+</body>
+
+</html>
